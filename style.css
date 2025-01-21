@@ -9570,7 +9570,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   padding: 16rem 0;
 }
 .banner-box-layout1 {
-  background-color: rgba(57, 108, 240, 0.8);
+  background-color: rgba(170, 141, 240, 0.8);
   padding: 40px 50px 20px;
 }
 .banner-box-layout1 .item-title {
@@ -11389,6 +11389,6 @@ iframe {
 /* Media Query para pantallas más pequeñas (móviles) */
 @media (max-width: 768px) {
   iframe {
-      height: 250px; /* Reducir la altura en pantallas más pequeñas */
+      height: 200px; /* Reducir la altura en pantallas más pequeñas */
   }
 }
