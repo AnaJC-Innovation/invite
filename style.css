@@ -11381,3 +11381,14 @@ div ~ :last-child .call-to-action-box-layout5 {
     opacity: 1;
   }
 }
+iframe {
+  width: 100%;
+  height: 400px; /* Tamaño por defecto */
+}
+
+/* Media Query para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+  iframe {
+      height: 250px; /* Reducir la altura en pantallas más pequeñas */
+  }
+}
