@@ -80,7 +80,7 @@ html {
 }
 body {
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Playwrite IN", serif;
   font-weight: 400;
   height: 100%;
   line-height: 1.5;
@@ -101,7 +101,7 @@ h4,
 h5,
 h6 {
   font-weight: 400;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Playwrite IN", serif;
   margin: 0 0 20px 0;
   color: #111111;
 }
@@ -1993,7 +1993,7 @@ ul {
   font-size: 8.4rem;
   text-transform: capitalize;
   font-weight: 700;
-  color: #9572f5;
+  color: #000000;
   margin-bottom: 20px;
   line-height: 1.2;
 }
@@ -3869,11 +3869,11 @@ ul {
   position: absolute;
   bottom: 0;
   z-index: 2;
-  left: calc((100% - 1290px)/2);
+  left: calc((100% - 120px)/2);
 }
 @media only screen and (max-width: 1399px) {
   .call-to-action-wrap-layout4 .item-img {
-    left: calc((100% - 1110px)/2);
+    left: calc((100% - 110px)/2);
   }
 }
 @media only screen and (max-width: 1199px) {
@@ -5142,6 +5142,24 @@ div ~ :last-child .call-to-action-box-layout5 {
   margin-left: 10px;
   color: #396cf0;
 }
+.tittle-c{
+  text-align: center;
+  margin-top: 25%;
+}
+
+.img-we{
+  max-width: 40% !important;
+  box-shadow: 10px 80px 25px rgb(196 174 254 / 30%);
+  transition: transform 0.3s ease;
+  transition: filter 0.3s ease;
+  border-radius: 15px;
+  transition: border-radius 0.3s ease;
+}
+.img-we:hover {
+  transform: scale(1.1);
+  border-radius: 50%;
+}
+
 .blog-box-layout3 .item-content .post-actions-wrapper ul li a i:before {
   margin-right: 0;
   font-size: 14px;
@@ -5464,7 +5482,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   color: #396cf0;
   font-size: 36px;
   z-index: 1;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Playwrite IN", serif;
   font-weight: 900;
 }
 @media only screen and (max-width: 575px) {
@@ -5711,7 +5729,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 }
 .brand-box-layout1 .item-title {
   margin-bottom: 0;
-  color: #ffffff;
+  color: #8866ff;
   text-transform: capitalize;
   font-weight: 400;
 }
@@ -5723,6 +5741,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 .brand-box-layout2 {
   position: relative;
 }
+,
 .brand-box-layout2 img {
   margin: 0 auto;
 }
@@ -6330,7 +6349,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   right: 0;
   top: 5px;
   z-index: 1;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Playwrite IN", serif;
   font-weight: 900;
   color: #111111;
   font-size: 12px;
@@ -7207,7 +7226,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 }
 .departments-box-layout7 .single-box:hover p a:after {
   content: "\f054";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Playwrite IN", serif;
   font-weight: 900;
   position: absolute;
   left: 0;
@@ -7320,7 +7339,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 .single-departments-box-layout1 .single-departments-img .tab-nav .nav-item a.active:before {
   content: "\f067";
   position: absolute;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Playwrite IN", serif;
   font-weight: 600;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -7383,7 +7402,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 .single-departments-box-layout1 .item-content .department-info li:after {
   content: "\f053";
   position: absolute;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Playwrite IN", serif;
   font-weight: 600;
   font-size: 10px;
   right: 0;
@@ -7511,7 +7530,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 }
 .testmonial-box-layout1 .item-content p:after {
   content: "\f10e";
-  font-family: "Font Awesome\ 5 Free";
+  font-family: "Playwrite IN", serif;
   bottom: -25px;
   left: -40px;
   position: absolute;
@@ -7521,7 +7540,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 }
 .testmonial-box-layout1 .item-content p:before {
   content: "\f10d";
-  font-family: "Font Awesome\ 5 Free";
+  font-family: "Playwrite IN", serif;
   top: -25px;
   right: -40px;
   position: absolute;
@@ -7596,7 +7615,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 }
 .testmonial-box-layout3 .item-content p:after {
   content: "\f10e";
-  font-family: "Font Awesome\ 5 Free";
+  font-family: "Playwrite IN", serif;
   bottom: -25px;
   left: -40px;
   position: absolute;
@@ -7606,7 +7625,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 }
 .testmonial-box-layout3 .item-content p:before {
   content: "\f10d";
-  font-family: "Font Awesome\ 5 Free";
+  font-family: "Playwrite IN", serif;
   top: -25px;
   right: -40px;
   position: absolute;
@@ -8976,7 +8995,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   position: relative;
 }
 .faq-content-layout1 .faq-list-layout1 .panel-default .panel-heading .accordion-toggle:after {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Playwrite IN", serif;
   content: "\f078";
   font-weight: 600;
   left: 23px;
@@ -9299,7 +9318,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 .features-box-layout1 .item-content .item-content-inner .list-item li:before {
   position: absolute;
   content: "\f053";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Playwrite IN", serif;
   font-weight: 600;
   font-size: 10px;
   background-color: #ffffff;
@@ -9530,7 +9549,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 }
 .inner-page-banner .breadcrumbs-area ul li:before {
   content: "\f053";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Playwrite IN", serif;
   font-weight: 600;
   font-size: 14px;
   position: absolute;
@@ -9693,7 +9712,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 }
 .widget-categories ul li:before {
   content: "\f104";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Playwrite IN", serif;
   color: #396cf0;
   position: absolute;
   right: 0;
@@ -10138,7 +10157,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 }
 .widget-about-info ul li a:before {
   content: "\f053";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Playwrite IN", serif;
   font-weight: 600;
   position: absolute;
   top: -2px;
@@ -10224,7 +10243,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 }
 .widget-department-info ul li a:before {
   content: "\f053";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Playwrite IN", serif;
   font-weight: 600;
   position: absolute;
   top: 50%;
@@ -11247,7 +11266,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   position: relative;
 }
 .choose-list-layout1 .panel-default .panel-heading .accordion-toggle:after {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Playwrite IN", serif;
   content: "\f078";
   font-weight: 600;
   left: 23px;
