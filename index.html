@@ -54,18 +54,16 @@
         </header> -->
         <!-- Header Area End Here -->
         <!-- Slider Area Start Here -->
-        <audio id="miMusica">
-            <source src="music/1. Fandanguito.mp3" type="audio/mp3">
+        <audio id="miMusica" autoplay muted>
+            <source src="ruta/a/tu/archivo.mp3" type="audio/mp3">
             Tu navegador no soporta la etiqueta de audio.
         </audio>
         <button onclick="playMusic()">Reproducir Música</button>
         <script>
-         const audio = document.getElementById('miMusica');
-
-// Función para reproducir la música
-function playMusic() {
-    audio.play();
-}
+        const audio = document.getElementById('miMusica');
+        audio.oncanplaythrough = function() {
+            audio.muted = false; // Desactivar el mute cuando la música está lista para reproducirse
+        };
         </script>
         <div class="slider-area slider-layout1 bg-light-primary s">
             <div class="bend niceties preview-1">
