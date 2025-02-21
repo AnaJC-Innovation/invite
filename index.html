@@ -54,16 +54,27 @@
         </header> -->
         <!-- Header Area End Here -->
         <!-- Slider Area Start Here -->
-        <audio id="miMusica" autoplay muted>
+        <audio id="miMusica" autoplay>
             <source src="music/Barbie_Dancing.mp3" type="audio/mp3">
-            Tu navegador no soporta la etiqueta de audio.
-        </audio>
-        <script>
-        const audio = document.getElementById('miMusica');
-        audio.oncanplaythrough = function() {
-            audio.muted = false; // Desactivar el mute cuando la música está lista para reproducirse
-        };
-        </script>
+            Tu navegador no soporta el elemento de audio.
+          </audio>
+          <script>
+            const audio = document.getElementById('miMusica');
+            
+            // Desactivar mute y empezar a reproducir cuando la música esté lista
+            audio.oncanplaythrough = function() {
+              console.log("La música está lista para reproducirse");
+              audio.muted = false;  // Asegurarnos de que no está silenciado
+              audio.play();         // Intentamos reproducirla (aunque autoplay debería manejarlo)
+            };
+        
+            // En caso de que el autoplay sea bloqueado, se puede añadir un evento para intentar reproducir al hacer clic
+            document.body.addEventListener('click', function() {
+              if (audio.paused) {
+                audio.play();
+              }
+            });
+          </script>
         <div class="slider-area slider-layout1 bg-light-primary s">
             <div class="bend niceties preview-1">
                 <div id="ensign-nivoslider-1" class="slides">
