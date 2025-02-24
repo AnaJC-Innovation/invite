@@ -159,6 +159,11 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <div class="container">
+                <center><h1>Julio</h1></center>
+                <div id="calendar-container"></div>
+            </div>
         </section>
         <section class="departments-wrap-layout8 bg-light-accent100">
             <div class="container">
@@ -436,6 +441,83 @@
                 updatePlayButton();
             }
         });
+        const calendarContainer = document.getElementById("calendar-container");
+
+// Establecer la fecha seleccionada
+const selectedDate = new Date(2025, 6, 19); // Mes de julio es 6 porque enero es 0
+const year = selectedDate.getFullYear();
+const month = selectedDate.getMonth();
+
+// Obtener el primer día del mes
+const firstDayOfMonth = new Date(year, month, 1);
+const lastDayOfMonth = new Date(year, month + 1, 0);
+const daysInMonth = lastDayOfMonth.getDate();
+
+// Crear los días de la semana
+const weekDays = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
+
+// Crear el calendario
+function createCalendar() {
+  const calendar = document.createElement("div");
+  calendar.classList.add("calendar");
+
+  // Crear los encabezados de los días de la semana
+  weekDays.forEach(day => {
+    const dayHeader = document.createElement("div");
+    dayHeader.classList.add("calendar-header");
+    dayHeader.textContent = day;
+    calendar.appendChild(dayHeader);
+  });
+
+  // Agregar los días del mes
+  let dayCounter = 1;
+  // Añadir días previos del mes anterior (para que el mes empiece en el día correcto de la semana)
+  for (let i = 0; i < firstDayOfMonth.getDay(); i++) {
+    const emptyDay = document.createElement("div");
+    calendar.appendChild(emptyDay);
+  }
+
+  // Crear cada día del mes
+  for (let i = firstDayOfMonth.getDay(); i < 7; i++) {
+    const dayElement = document.createElement("div");
+    dayElement.classList.add("calendar-day");
+    dayElement.textContent = dayCounter;
+    if (dayCounter === selectedDate.getDate()) {
+      dayElement.classList.add("selected-day");
+    }
+    // dayElement.addEventListener("click", () => {
+    //   // Aquí puedes poner una función para manejar la selección de días
+    //   alert(`Seleccionaste el día ${dayCounter} de julio de 2025`);
+    // });
+    calendar.appendChild(dayElement);
+    dayCounter++;
+  }
+
+  // Agregar el resto de los días del mes
+  while (dayCounter <= daysInMonth) {
+    for (let i = 0; i < 7; i++) {
+      if (dayCounter <= daysInMonth) {
+        const dayElement = document.createElement("div");
+        dayElement.classList.add("calendar-day");
+        dayElement.textContent = dayCounter;
+        if (dayCounter === selectedDate.getDate()) {
+          dayElement.classList.add("selected-day");
+        }
+        // dayElement.addEventListener("click", () => {
+        //   // Aquí puedes poner una función para manejar la selección de días
+        //   alert(`Seleccionaste el día ${dayCounter} de julio de 2025`);
+        // });
+        calendar.appendChild(dayElement);
+        dayCounter++;
+      }
+    }
+  }
+
+  calendarContainer.appendChild(calendar);
+}
+
+// Llamar la función para generar el calendario
+createCalendar();
     </script>
 </body>
     <script src="js/jquery-2.2.4.min.js"></script>
