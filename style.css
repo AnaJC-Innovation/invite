@@ -280,6 +280,48 @@ ul {
   height: 4px;
   border-radius: 5px;
 }
+#calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.month-name {
+  font-size: 36px; /* Tamaño grande para el nombre del mes */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.calendar-header {
+  font-weight: bold;
+  background-color: #f2f2f2;
+}
+
+.calendar-day {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.calendar-day:hover {
+  background-color: #e0e0e0;
+}
+
+.selected-day {
+  background-color: #8e26f0;
+  font-weight: bold;
+}
 
 .form-range::-webkit-slider-thumb {
   -webkit-appearance: none;
