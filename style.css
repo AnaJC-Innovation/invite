@@ -248,6 +248,56 @@ ul {
   font-size: 20px;
   font-weight: bold;
 }
+.player {
+  background-color: #bb9dca;
+  padding: 30px;
+  border-radius: 15px;
+  width: 500px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+}
+
+.icon-btn:hover {
+  color: #610a8d; /* Color verde de Spotify */
+}
+
+.play-btn i {
+  font-size: 40px;
+}
+
+.progress-container {
+  width: 100%;
+}
+
+.form-range {
+  width: 100%;
+  background-color: #eee5f3;
+  height: 4px;
+  border-radius: 5px;
+}
+
+.form-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #610a8d;
+  cursor: pointer;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #610a8d;
+  cursor: pointer;
+}
 .reloj {
   color: #24282c !important;
   border-radius: 70px !important;
@@ -3140,14 +3190,14 @@ ul {
   background-repeat: no-repeat;
 }
 .about-wrap-layout2 {
-  padding: 9.3rem 0 6.3rem;
+  padding: 3.3rem 0 3.3rem;
 }
 .about-wrap-layout3 {
-  padding: 9.2rem 0px 6.5rem;
+  padding: 3.2rem 0px 3.5rem;
 }
 @media only screen and (max-width: 991px) {
   .about-wrap-layout3 {
-    padding: 4.5rem 0px 6.5rem;
+    padding: 3.5rem 0px 6.5rem;
   }
 }
 .about-wrap-layout4 {
@@ -3367,7 +3417,7 @@ ul {
 }
 @media only screen and (max-width: 991px) {
   .about-box-layout6 {
-    margin-bottom: 50px;
+    margin-bottom: 5px;
   }
 }
 .about-box-layout6 .item-title {
@@ -3380,10 +3430,10 @@ ul {
   color: #111111;
   font-size: 22px;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 4px;
 }
 .about-box-layout6 p {
-  margin-bottom: 24px;
+  margin-bottom: 4px;
 }
 .about-box-layout7 .item-video {
   position: relative;
@@ -5720,7 +5770,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 }
 @media only screen and (max-width: 991px) {
   .brand-box-layout1 {
-    padding: 9rem 0 10rem 0;
+    padding: 2rem 0 2rem 0;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -5735,7 +5785,7 @@ div ~ :last-child .call-to-action-box-layout5 {
 }
 @media only screen and (max-width: 991px) {
   .brand-box-layout1 .item-title {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
 }
 .brand-box-layout2 {
@@ -6468,7 +6518,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   padding: 9.2rem 0px 10rem;
 }
 .departments-wrap-layout8 {
-  padding: 10rem 0px 7rem;
+  padding: 4rem 0px 4rem;
 }
 .departments-box-layout1 {
   margin-bottom: 30px;
@@ -9271,12 +9321,12 @@ div ~ :last-child .call-to-action-box-layout5 {
 @media only screen and (max-width: 991px) {
   .features-box-layout1 .item-content {
     position: inherit;
-    padding: 10rem 5rem;
+    padding: 4rem 2rem;
   }
 }
 @media only screen and (max-width: 575px) {
   .features-box-layout1 .item-content {
-    padding: 10rem 0;
+    padding: 3rem 0;
   }
 }
 .features-box-layout1 .item-content .item-content-inner .item-title {
@@ -9390,7 +9440,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   background: transparent;
   float: left;
   font-size: 2rem;
-  padding: 0 10px;
+  padding: 0 5px;
 }
 .features-box-layout1:nth-child(even) .item-content-inner {
   padding-right: 10rem;
