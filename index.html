@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="css/bootstrap-rtl.css">
     <!-- Elements CSS -->
     <link rel="stylesheet" href="css/elements.css">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,28 +55,6 @@
         </header> -->
         <!-- Header Area End Here -->
         <!-- Slider Area Start Here -->
-        <button class="btn col-12" style="background-image: url('img/xv/Fondo\ Princesa\ Sofia.jpg')!important;"><h1>Da clic aquí para iniciar</h1></button>
-        <audio id="miMusica" autoplay>
-            <source src="music/Barbie_Dancing.mp3" type="audio/mp3">
-            Tu navegador no soporta el elemento de audio.
-          </audio>
-         <script>
-            const audio = document.getElementById('miMusica');
-            
-            // Desactivar mute y empezar a reproducir cuando la música esté lista
-            audio.oncanplaythrough = function() {
-              console.log("La música está lista para reproducirse");
-              audio.muted = false;  // Asegurarnos de que no está silenciado
-              audio.play();         // Intentamos reproducirla (aunque autoplay debería manejarlo)
-            };
-        
-            // En caso de que el autoplay sea bloqueado, se puede añadir un evento para intentar reproducir al hacer clic
-            document.body.addEventListener('click', function() {
-              if (audio.paused) {
-                audio.play();
-              }
-            });
-          </script>
         <div class="slider-area slider-layout1 bg-light-primary s">
             <div class="bend niceties preview-1">
                 <div id="ensign-nivoslider-1" class="slides">
@@ -93,6 +72,43 @@
                 </div>
             </div>
         </div>
+        <section class="call-to-action-wrap-layout4" style="background-image: url('img/xv/Fondo\ Princesa\ Sofia.jpg')!important;">
+            <div class="line-separatorl"></div>
+            <div class="container d-flex justify-content-center align-items-center vh-100">
+                <div class="player">
+                    <div class="progress-container mb-3">
+                        <input type="range" class="form-range" id="progress" value="50" step="1" min="0" max="100">
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center mb-3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn icon-btn" id="randomBtn"><i class="fa fa-random"></i></button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn icon-btn" id="forwardBtn"><i class="fa fa-step-forward"></i></button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn icon-btn" id="playBtn"><i class="fa fa-play"></i></button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn icon-btn" id="backwardBtn"><i class="fa fa-step-backward"></i></button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn icon-btn" id="repeatBtn"><i class="fa fa-repeat"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Reproductor de audio -->
+                    <audio id="audioPlayer" src="music/Barbie_Dancing.mp3"></audio>                                    
+                    <div class="text-center">
+                        <h5>Barbie in the 12 Dancing Princesses Theme</h5>
+                        <p>Fairy Lullaby</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Slider Area End Here -->
                 <!-- Call to Action Area Start Here -->
         <section class="call-to-action-wrap-layout4" style="background-image: url('img/xv/Fondo\ Princesa\ Sofia.jpg')!important;">
@@ -348,6 +364,87 @@
               </a>
         </center>
     </section>
+    <script>
+        // Obtener el elemento de audio y los botones
+        const audioPlayer = document.getElementById('audioPlayer');
+        const randomBtn = document.getElementById('randomBtn');
+        const forwardBtn = document.getElementById('forwardBtn');
+        const playBtn = document.getElementById('playBtn');
+        const backwardBtn = document.getElementById('backwardBtn');
+        const repeatBtn = document.getElementById('repeatBtn');
+
+        // Variables de control
+        let isPlaying = false;
+        let isRepeating = false;
+        let tracks = ["track1.mp3", "track2.mp3", "track3.mp3"]; // Lista de pistas
+        let currentTrackIndex = 0;
+
+        // Función de aleatorio (cambiar a una pista aleatoria)
+        randomBtn.addEventListener('click', function() {
+            console.log('Botón Aleatorio presionado');
+            currentTrackIndex = Math.floor(Math.random() * tracks.length);
+            audioPlayer.src = tracks[currentTrackIndex];
+            audioPlayer.play();
+            updatePlayButton();
+        });
+
+        // Función avanzar (adelantar a la siguiente canción)
+        forwardBtn.addEventListener('click', function() {
+            console.log('Botón Avanzar presionado');
+            currentTrackIndex = (currentTrackIndex + 1) % tracks.length;  // Siguiente pista
+            audioPlayer.src = tracks[currentTrackIndex];
+            audioPlayer.play();
+            updatePlayButton();
+        });
+
+        // Función reproducir/pausar
+        playBtn.addEventListener('click', function() {
+            if (isPlaying) {
+                console.log('Pausando...');
+                audioPlayer.pause();
+            } else {
+                console.log('Reproduciendo...');
+                audioPlayer.play();
+            }
+            isPlaying = !isPlaying;
+            updatePlayButton();
+        });
+
+        // Función retroceder (ir a la canción anterior)
+        backwardBtn.addEventListener('click', function() {
+            console.log('Botón Retroceder presionado');
+            currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;  // Canción anterior
+            audioPlayer.src = tracks[currentTrackIndex];
+            audioPlayer.play();
+            updatePlayButton();
+        });
+
+        // Función repetir (activar/desactivar repetición)
+        repeatBtn.addEventListener('click', function() {
+            isRepeating = !isRepeating;
+            console.log(isRepeating ? 'Repetir activado' : 'Repetir desactivado');
+            audioPlayer.loop = isRepeating;  // Activar/desactivar repetición
+        });
+
+        // Función para actualizar el ícono del botón de reproducción/pausa
+        function updatePlayButton() {
+            if (isPlaying) {
+                playBtn.innerHTML = '<i class="fa fa-pause"></i>';  // Mostrar icono de pausa
+            } else {
+                playBtn.innerHTML = '<i class="fa fa-play"></i>';  // Mostrar icono de play
+            }
+        }
+
+        // Event listener para el final de la pista (reproducir la siguiente)
+        audioPlayer.addEventListener('ended', function() {
+            if (!isRepeating) {
+                currentTrackIndex = (currentTrackIndex + 1) % tracks.length;  // Avanzar a la siguiente pista
+                audioPlayer.src = tracks[currentTrackIndex];
+                audioPlayer.play();
+                updatePlayButton();
+            }
+        });
+    </script>
 </body>
     <script src="js/jquery-2.2.4.min.js"></script>
     <!-- Plugins js -->
