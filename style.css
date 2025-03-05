@@ -6727,6 +6727,20 @@ div ~ :last-child .call-to-action-box-layout5 {
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+.departments-box-layout21 {
+  background-color: #ffffff;
+  margin-bottom: 3rem;
+  padding: 10px 15px;
+  position: relative;
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(227, 227, 227, 0.75);
+  -moz-box-shadow: 0px 1px 0px 0px rgba(227, 227, 227, 0.75);
+  box-shadow: 0px 1px 0px 0px rgba(227, 227, 227, 0.75);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
 .departments-box-layout2 .departments-sl {
   font-size: 22px;
   position: absolute;
